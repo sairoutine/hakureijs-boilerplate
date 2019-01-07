@@ -1,6 +1,6 @@
-# hakureijs-boilertemplate
+# hakureijs-boilerplate
 ```
-cd ./hakureijs-boilertemplate
+cd ./hakureijs-boilerplate
 git remote rm origin
 npm install
 git submodule update --init --recursive
