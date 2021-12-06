@@ -6,7 +6,7 @@ var WebpackBuildNotifierPlugin = require('webpack-build-notifier');
 
 const js = {
 	mode: MODE,
-	devtool: enabledSourcemap ? 'cheap-module-eval-source-map' : false,
+	devtool: enabledSourcemap ? 'eval-cheap-module-source-map' : false,
 	entry: `${ __dirname }/src/js/main.js`,
 	output: {
 		path: `${ __dirname }/public/js/`,
@@ -33,7 +33,9 @@ const js = {
 	},
 	devServer: {
 		port: 3000,
-		contentBase: `${ __dirname }/public/`,
+		static: {
+			directory: `${ __dirname }/public/`,
+		},
 		open: true,
 	},
 	  plugins: [
