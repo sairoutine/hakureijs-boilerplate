@@ -8,7 +8,7 @@
     "watch": "webpack-dev-server",
     "build:atsumaru": "npm run compile:js && zip -r ./releases/game.zip ./public/",
     "build:pc": "npm run compile:js && npm run package:win && npm run package:mac",
-    "compile:js": "MODE=production webpack --progress --colors",
+    "compile:js": "MODE=production webpack --progress",
     "package:win": "cd public && electron-packager ./ NewGame --overwrite --platform=win32  --arch=x64 --electron-version=1.6.0 --icon=icon.ico --out ../releases --asar && mv ../releases/NewGame-win32-x64 ../releases/Win",
     "package:mac": "cd public && electron-packager ./ NewGame --overwrite --platform=darwin --arch=x64 --electron-version=1.6.0 --icon=icon.icns --out ../releases --asar && mv ../releases/NewGame-darwin-x64 ../releases/Mac"
   },
